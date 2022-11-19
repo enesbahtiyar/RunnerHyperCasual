@@ -8,9 +8,11 @@ public class CamFollowPlayer : MonoBehaviour
     [SerializeField] float speed = 10f;
     [SerializeField] Vector3 dist;
     [SerializeField] Transform lookTarget;
+
     private void LateUpdate()
     {
-        Vector3 dPos = cameraTarget.position + dist;        Vector3 sPos = Vector3.Lerp(transform.position, dPos, speed * Time.deltaTime);
+        Vector3 dPos = cameraTarget.position + dist;        
+        Vector3 sPos = Vector3.Lerp(transform.position, dPos, speed * Time.deltaTime);
         transform.position = sPos;
         transform.LookAt(lookTarget.position);
     }
