@@ -9,7 +9,7 @@ public class CamFollowPlayer : MonoBehaviour
     [SerializeField] Vector3 dist;
     [SerializeField] Transform lookTarget;
 
-    private void LateUpdate()
+    private void LateUpdate() 
     {
         Vector3 dPos = cameraTarget.position + dist;        
         Vector3 sPos = Vector3.Lerp(transform.position, dPos, speed * Time.deltaTime);

@@ -5,7 +5,7 @@ using TMPro;
 
 public class CollectCoin : MonoBehaviour
 {
-    int currentGold = 0;
+    public int currentGold = 0;
     [SerializeField] TextMeshProUGUI goldDisplay;
 
     private void Start()
